@@ -3,7 +3,7 @@ import os
 import yaml
 import rdflib
 from rdflib import URIRef, Literal
-from rdflib.namespace import RDF, SKOS, Namespace, NamespaceManager
+from rdflib.namespace import RDF, SKOS, Namespace, NamespaceManager, XSD
 
 BDR = Namespace("http://purl.bdrc.io/resource/")
 BDO = Namespace("http://purl.bdrc.io/ontology/core/")
@@ -31,13 +31,28 @@ def ymltordf(ymlobj):
     g.add((mainurl, RDF.type, BDO.Work))
     g.add((mainurl, RDF.type, BDO.VirtualWork))
     addnames(ymlobj, mainurl, g)
+    componentstordf(ymlobj, mainurl, g)
     return ds
 
-def componenttordf(ymlcollection, parent, g):
+def componentstordf(obj, parenturi, g):
     """
     Converts a component in the yaml object into rdf.
     """
-    pass
+    if "components" not in obj:
+        return
+    i = 1
+    for component in obj["components"]:
+        res = rdflib.BNode() if "id" not in component else BDR[component["id"]]
+        g.add((res, BDO.workPartIndex, Literal(i, datatype=XSD.integer)))
+        g.add((res, BDO.workPartOf, parenturi))
+        g.add((parenturi, BDO.workHasPart, res))
+        if "id_bdrc" in component:
+            linkto = URIRef(BDR[component["id_bdrc"]])
+            g.add((res, BDO.workLinkTo, linkto))
+        addnames(component, res, g)
+        i+= 1
+        componentstordf(component, res, g)
+    
 
 def addnames(ymlobj, resource, graph):
     """
