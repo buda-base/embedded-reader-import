@@ -1,8 +1,9 @@
 id: W0ERI002
 name_en: A Text Collection
 institution:
-  id_bdrcid: G183
-  name_bo-x-ewts: A Monastery
+  id: C0ERI002
+  placeid_bdrc: G183
+  name_bo-x-ewts: The Shdra of a Monastery
   website: http://example.com
 components:
   - id: W0ERI002_001
