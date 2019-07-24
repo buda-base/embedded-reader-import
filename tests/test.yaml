@@ -9,16 +9,16 @@ components:
     name_bo-x-ewts: dol po pa/
     components:
       - id_bdrc: W21208
-        name_bo-x-ewts: gsung 'bum
+        name_bo-x-ewts: gsung 'bum/
       - id_bdrc: W23727
         name_en: Complete works (Gangtse Edition)
-      - id: W1AC374
+      - id_bdrc: W1AC374
         name_bo-x-ewts: gsung 'bum/ glog klad par ma/
   - id: W0ERI002_001
-    name_sa-x-ewts: tA ra nA tha
+    name_sa-x-ewts: tA ra nA tha/
     components:
       - id_bdrc: W22276
-        name_bo-x-ewts: gsung 'bum/ 'dzam thang
+        name_bo-x-ewts: gsung 'bum/ 'dzam thang/
       - id_bdrc: W22277
         name_en: Complete works (Ladakh Edition)
       - id_bdrc: W1PD45495
