@@ -1,0 +1,67 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+
+bdg:W0CJ001 {
+
+    bdr:W0CJ001 a :VirtualWork , :Work ;
+        skos:prefLabel "Jonangpa Text Collection"@en ;
+        :workHasPart bdr:W0CJ001_P001 , bdr:W0CJ001_P002 .
+
+
+    bdr:W0CJ001_P001 a :VirtualWork , :Work ;
+        skos:prefLabel "dol po pa/"@bo-x-ewts , "Dolpopa"@bo-x-ewts ;
+        :workPartIndex 1 ;
+        :workPartOf bdr:W0CJ001 ;
+        :workHasPart bdr:W0CJ001_P001_P001 , bdr:W0CJ001_P001_P002 , bdr:W0CJ001_P001_P003 .
+
+    bdr:W0CJ001_P002 a :VirtualWork , :Work ;
+        skos:prefLabel "tA ra nA tha/"@bo-x-ewts , "Taranatha"@en ;
+        :workPartIndex 2 ;
+        :workPartOf bdr:W0CJ001 ;
+        :workHasPart bdr:W0CJ001_P002_P001 , bdr:W0CJ001_P002_P002 , bdr:W0CJ001_P002_P003 .
+
+    bdr:W0CJ001_P001_P001 a :VirtualWork , :Work ;
+        skos:prefLabel "gsung 'bum/ 'dzam thang/"@bo-x-ewts , "Complete works (Dzamthang Edition)"@en ;
+        :workPartIndex 1 ;
+        :workPartOf bdr:W0CJ001_P001 ;
+        :workLinkTo bdr:W21208 .
+
+    bdr:W0CJ001_P001_P002 a :VirtualWork , :Work ;
+        skos:prefLabel "Complete works (Gangtse Edition)"@en ;
+        :workPartIndex 2 ;
+        :workPartOf bdr:W0CJ001_P001 ;
+        :workLinkTo bdr:W23727 .
+
+    bdr:W0CJ001_P001_P003 a :VirtualWork , :Work ;
+        skos:prefLabel "gsung 'bum/ glog klad par ma/"@bo-x-ewts , "Complete works (Pecing Edition)"@en ;
+        :workPartIndex 3 ;
+        :workPartOf bdr:W0CJ001_P001 ;
+        :workLinkTo bdr:W1AC374 .
+
+    bdr:W0CJ001_P002_P001 a :VirtualWork , :Work ;
+        skos:prefLabel "gsung 'bum/ 'dzam thang/"@bo-x-ewts , "Complete works (Dzamthang Edition)"@en ;
+        :workPartIndex 1 ;
+        :workPartOf bdr:W0CJ001_P002 ;
+        :workLinkTo bdr:W22276 .
+
+    bdr:W0CJ001_P002_P002 a :VirtualWork , :Work ;
+        skos:prefLabel "Complete works (Ladakh Edition)"@en ;
+        :workPartIndex 2 ;
+        :workPartOf bdr:W0CJ001_P002 ;
+        :workLinkTo bdr:W22277 .
+
+    bdr:W0CJ001_P002_P003 a :VirtualWork , :Work ;
+        skos:prefLabel "gsung 'bum/ dpe bsdur ma/"@bo-x-ewts , "Complete works (Peydurma)"@en ;
+        :workPartIndex 3 ;
+        :workPartOf bdr:W0CJ001_P002 ;
+        :workLinkTo bdr:W1PD45495 .
+
+}

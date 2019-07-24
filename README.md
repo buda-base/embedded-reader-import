@@ -1,15 +1,26 @@
-# embedded-reader-import
+# Collection import script for BDRC's eReader
 
-## Import script
 Import script for the BDRC embeded reader.
 
-This script takes a list of works and outputs a ttl file, ready to be imported to generate the iframe code. 
+This script takes a TSV file (in the `input/` folder), generated from a spreadsheet representing the collection, and outputs a .trig file (in the `output/` folder), ready to be imported in BDRC's database to generate the iframe code.
 
-## Creating a Custom Reader
+## Dependency installation
 
-- list the works of your collection in a csv file
-- name the csv file according to the W0CJ001 scheme
-- put the list in the 'collections' folder
-- run the ttlify.py script
-- notify our tech team
-- add your collection ID and location url to [the reader's code](https://github.com/buda-base/public-digital-library/blob/master/BDRC_Embedded_Reader.md)
+```sh
+$ pip3 install -r requirements.txt
+```
+
+## Running the scripts
+
+```sh
+$ python3 txttoyaml.py input/myfile.txt > tmp-yaml/myfile.yml
+```
+
+will produce `tmp-yaml/myfile.yml`.
+
+
+```sh
+$ python3 yamltordf.py tmp-yaml/myfile.yml > output/myfile.trig
+```
+
+will produce the corresponding file in `output/myfile.trig`.
