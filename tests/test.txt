@@ -1,0 +1,22 @@
+G183 Shechen Monastery	http://example.com			
+				
+W0ERI002 Shechen Shedra Text Collection				
+	Year 1			
+		Philosophy		
+			W21208 Boddhicharyavatara	
+			W23727 Story-commenrary of the Boddhicharyavatara	
+		History		
+			History of Tibet	
+				W1AC374
+			History of Buddhism	
+				W1AC374 Complete works (Pecing Edition)
+	Year 2			
+		W22276 Complete works (Dzamthang Edition)		
+		W22277 Complete works (Ladakh Edition)		
+		W1PD45495 Complete works (Peydurma)		
+				
+				
+				
+				
+				
+				
