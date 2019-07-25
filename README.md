@@ -10,17 +10,10 @@ This script takes a TSV file (in the `input/` folder), generated from a spreadsh
 $ pip3 install -r requirements.txt
 ```
 
-## Running the scripts
+## Running the script
 
 ```sh
-$ python3 txttoyaml.py input/myfile.txt > tmp-yaml/myfile.yml
+$ python3 tsvtordf.py input/myfile.tsv > output/myfile.trig
 ```
 
-will produce `tmp-yaml/myfile.yml`.
-
-
-```sh
-$ python3 yamltordf.py tmp-yaml/myfile.yml > output/myfile.trig
-```
-
-will produce the corresponding file in `output/myfile.trig`.
+will produce `output/myfile.trig`.
