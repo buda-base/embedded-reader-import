@@ -32,7 +32,6 @@ def linestordf(tsvlines, graphname):
     while i < len(tsvlines):
         # the function returns the last analzed idx
         i = addlineaschild(lines, i, None, g, None)
-        print("returned to main, i="+str(i))
         i += 1
     return ds
 
@@ -42,7 +41,6 @@ def fillchildrenofline(lines, lineidx, lineres, g):
     been considered a child.
     """
     linedepth = lines[lineidx]["depth"]
-    print("fillchildrenofline "+str(lineidx)+", depth="+str(linedepth))
     thislineidx = lineidx + 1
     partidx = 1
     while thislineidx < len(lines):
@@ -61,7 +59,6 @@ def addlineaschild(lines, lineidx, parent, g, partidx):
     """
     Adds a line as a child of another one, and get all its children too
     """
-    print("addlineaschild with idx = "+str(lineidx))
     line = lines[lineidx]
     cparts = splitcontent(line["content"])
     thisres = rdflib.BNode()
@@ -130,7 +127,6 @@ def getlinesfromfile(filepath):
                 if cell:
                     lines.append({"depth": depth, "content": cell})
                 depth += 1
-    print(lines)
     return lines
 
 def graphnamefromfilepath(filepath):
