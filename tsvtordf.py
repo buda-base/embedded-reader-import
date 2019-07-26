@@ -44,7 +44,6 @@ def fillchildrenofline(lines, lineidx, lineres, g):
     thislineidx = lineidx + 1
     partidx = 1
     while thislineidx < len(lines):
-        print("fillchildrenofline seq "+str(thislineidx))
         # the function returns the last analzed idx
         thisline = lines[thislineidx]
         if thisline["depth"] <= linedepth:
@@ -130,7 +129,7 @@ def getlinesfromfile(filepath):
     return lines
 
 def graphnamefromfilepath(filepath):
-    return "test"
+    return os.path.splitext(os.path.basename(filepath))[0]
 
 if __name__ == "__main__":
     srcfile = sys.argv[1]
