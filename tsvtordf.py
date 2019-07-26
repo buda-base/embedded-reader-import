@@ -54,13 +54,18 @@ def fillchildrenofline(lines, lineidx, lineres, g):
     return thislineidx-1
 
 
+def geturl(parent, partidx):
+    if not parent or not partidx: # should only happen when the URI is given in the tsv
+        return None
+    return URIRef(str(parent)+"_"+('%02d' % partidx))
+
 def addlineaschild(lines, lineidx, parent, g, partidx):
     """
     Adds a line as a child of another one, and get all its children too
     """
     line = lines[lineidx]
     cparts = splitcontent(line["content"])
-    thisres = rdflib.BNode()
+    thisres = geturl(parent, partidx)
     if cparts[0] is not None:
         firstres = URIRef(BDR[cparts[0]])
         if cparts[0].startswith("W0ERI"):
@@ -129,7 +134,10 @@ def getlinesfromfile(filepath):
     return lines
 
 def graphnamefromfilepath(filepath):
-    return os.path.splitext(os.path.basename(filepath))[0]
+    basename = os.path.splitext(os.path.basename(filepath))[0]
+    if not basename.startswith("W0ERI"):
+        basename += "W0ERI"
+    return basename
 
 if __name__ == "__main__":
     srcfile = sys.argv[1]
