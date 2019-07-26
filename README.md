@@ -12,8 +12,22 @@ $ pip3 install -r requirements.txt
 
 ## Running the script
 
+To output the RDF of one tsv file:
+
 ```sh
-$ python3 tsvtordf.py input/myfile.tsv > output/myfile.trig
+$ python3 tsvtordf.py input/myfile.tsv
 ```
 
-will produce `output/myfile.trig`.
+To convert all the files into the `output/` folder:
+
+```
+for i in input/*.tsv; do b=`basename $i`; bnoext=${b%.*}; python3 tsvtordf.py $i > output/$bnoext.trig; done
+```
+
+## Uploading to Fuseki
+
+When on buda2, once the files have been converted, run:
+
+```
+for i in output/*.trig; do b=`basename $i`; bnoext=${b%.*}; bin/putg $b bdrcrw $i; done
+```
