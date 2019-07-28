@@ -134,7 +134,10 @@ def getlinesfromfile(filepath):
     return lines
 
 def graphnamefromfilepath(filepath):
-    basename = os.path.splitext(os.path.basename(filepath))[0]
+    basename = os.path.splitext(os.path.basename(filepath))[0].strip()
+    firstspaceidx = basename.find(" ")
+    if firstspaceidx > 0:
+        basename = basename[:firstspaceidx]
     if not basename.startswith("W0ERI"):
         basename += "W0ERI"
     return basename
