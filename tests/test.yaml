@@ -1,4 +1,4 @@
-id: W0ERI002
+id: W1ERI0002
 name_en: A Text Collection
 institution:
   id: C0ERI002
@@ -6,7 +6,7 @@ institution:
   name_bo-x-ewts: The Shdra of a Monastery
   website: http://example.com
 components:
-  - id: W0ERI002_001
+  - id: W1ERI0002_001
     name_bo-x-ewts: dol po pa/
     components:
       - id_bdrc: W21208
@@ -15,7 +15,7 @@ components:
         name_en: Complete works (Gangtse Edition)
       - id_bdrc: W1AC374
         name_bo-x-ewts: gsung 'bum/ glog klad par ma/
-  - id: W0ERI002_002
+  - id: W1ERI0002_002
     name_sa-x-ewts: tA ra nA tha/
     components:
       - id_bdrc: W22276

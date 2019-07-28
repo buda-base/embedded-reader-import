@@ -68,7 +68,7 @@ def addlineaschild(lines, lineidx, parent, g, partidx):
     thisres = geturl(parent, partidx)
     if cparts[0] is not None:
         firstres = URIRef(BDR[cparts[0]])
-        if cparts[0].startswith("W0ERI"):
+        if cparts[0].startswith("W1ERI0"):
             thisres = firstres
         else:
             g.add((thisres, BDO.workLinkTo, firstres))
@@ -138,8 +138,8 @@ def graphnamefromfilepath(filepath):
     firstspaceidx = basename.find(" ")
     if firstspaceidx > 0:
         basename = basename[:firstspaceidx]
-    if not basename.startswith("W0ERI"):
-        basename += "W0ERI"
+    if not basename.startswith("W1ERI0"):
+        basename += "W1ERI0"
     return basename
 
 if __name__ == "__main__":
