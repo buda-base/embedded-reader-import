@@ -10,6 +10,14 @@ This script takes a TSV file (in the `input/` folder), generated from a spreadsh
 $ pip3 install -r requirements.txt
 ```
 
+It may also be necessary to:
+
+```sh
+pip3 install setuptools
+```
+
+before the requirements.txt.
+
 ## Running the script
 
 To output the RDF of one tsv file:
@@ -29,5 +37,5 @@ for i in input/*.tsv; do b=`basename $i`; bnoext=${b%.*}; python3 tsvtordf.py $i
 When on buda2, once the files have been converted, run:
 
 ```
-for i in output/*.trig; do b=`basename $i`; bnoext=${b%.*}; bin/putg $b bdrcrw $i; done
+for i in output/*.trig; do b=`basename $i`; bnoext=${b%.*}; bin/putg bdrcrw $b $i; done
 ```
