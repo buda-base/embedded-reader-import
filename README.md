@@ -44,6 +44,6 @@ for i in output/*.trig; do b=`basename $i`; bnoext=${b%.*}; bin/putg bdrcrw $b $
 
 ## Setting up an embedded reader
 
-- [Setup Tutorial](https://github.com/buda-base/public-digital-library/blob/master/BDRC_Embedded_Reader.md)
-- [Catalog Spreadsheets](https://drive.google.com/drive/folders/1sW4fFSYPswMg9pfP7zpVdy-VlGu1MLIY?usp=sharing)
-- [Embeded Reader demo sites](https://github.com/bdrc-reader)
+- [setup instructions](https://github.com/buda-base/public-digital-library/blob/master/BDRC_Embedded_Reader.md)
+- [catalog spreadsheets](https://drive.google.com/drive/folders/1sW4fFSYPswMg9pfP7zpVdy-VlGu1MLIY?usp=sharing)
+- [demo sites](https://github.com/bdrc-reader)
