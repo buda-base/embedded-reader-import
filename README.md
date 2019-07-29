@@ -29,7 +29,7 @@ $ python3 tsvtordf.py input/myfile.tsv
 To convert all the files into the `output/` folder:
 
 ```
-for i in input/*.tsv; do b=`basename $i`; bnoext=${b%.*}; python3 tsvtordf.py $i > output/$bnoext.trig; done
+for i in input/*.tsv; do b=`basename $i`; bnoext=${b%.*}; bfirst=${bnoext% *}; python3 tsvtordf.py $i > output/$bfirst.trig; done
 ```
 
 ## Uploading to Fuseki
