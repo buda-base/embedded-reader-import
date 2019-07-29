@@ -39,3 +39,9 @@ When on buda2, once the files have been converted, run:
 ```
 for i in output/*.trig; do b=`basename $i`; bnoext=${b%.*}; bin/putg bdrcrw $b $i; done
 ```
+
+## Input file format
+
+## Setting up an embedded reader
+
+[link](https://github.com/buda-base/public-digital-library/blob/master/BDRC_Embedded_Reader.md)
