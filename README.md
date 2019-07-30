@@ -29,7 +29,7 @@ $ python3 tsvtordf.py input/myfile.tsv
 To convert all the files into the `output/` folder:
 
 ```
-for i in input/*.tsv; do b=`basename $i`; bnoext=${b%.*}; python3 tsvtordf.py $i > output/$bnoext.trig; done
+for i in input/*.tsv; do b=`basename $i`; bnoext=${b%.*}; bfirst=${bnoext% *}; python3 tsvtordf.py $i > output/$bfirst.trig; done
 ```
 
 ## Uploading to Fuseki
@@ -37,8 +37,10 @@ for i in input/*.tsv; do b=`basename $i`; bnoext=${b%.*}; python3 tsvtordf.py $i
 When on buda2, once the files have been converted, run:
 
 ```
-for i in output/*.trig; do b=`basename $i`; bnoext=${b%.*}; bin/putg bdrcrw $b $i; done
+for i in output/*.trig; do b=`basename $i`; bnoext=${b%.*}; putg bdrcrw $b $i; done
 ```
+
+Note that `putg` is located in ~/bin/ on buda2 and so ~/bin must be on the path when the above is run.
 
 ## Input file format
 
