@@ -37,8 +37,10 @@ for i in input/*.tsv; do b=`basename $i`; bnoext=${b%.*}; bfirst=${bnoext% *}; p
 When on buda2, once the files have been converted, run:
 
 ```
-for i in output/*.trig; do b=`basename $i`; bnoext=${b%.*}; bin/putg bdrcrw $b $i; done
+for i in output/*.trig; do b=`basename $i`; bnoext=${b%.*}; putg bdrcrw $b $i; done
 ```
+
+Note that `putg` is located in ~/bin/ on buda2 and so ~/bin must be on the path when the above is run.
 
 ## Input file format
 
