@@ -3,7 +3,7 @@ import os
 import csv
 import re
 import rdflib
-from rdflib import URIRef, Literal
+from rdflib import URIRef, Literal, BNode
 from rdflib.namespace import RDF, SKOS, Namespace, NamespaceManager, XSD
 
 BDR = Namespace("http://purl.bdrc.io/resource/")
@@ -70,6 +70,17 @@ def addlineaschild(lines, lineidx, parent, g, partidx):
         firstres = URIRef(BDR[cparts[0]])
         if cparts[0].startswith("W1ERI0"):
             thisres = firstres
+        elif cparts[2] is not None:
+            loc = BNode()
+            locinfo = cparts[2]
+            g.add((thisres, BDO.workLocation, loc))
+            g.add((loc, BDO.workLocationPage, Literal(locinfo[0], datatype=XSD.integer)))
+            g.add((loc, BDO.workLocationEndPage, Literal(locinfo[1], datatype=XSD.integer)))
+            startvol = 1 if len(locinfo) < 3 else locinfo[2]
+            endvol = startvol if len(locinfo) < 4 else locinfo[3]
+            g.add((loc, BDO.workLocationVolume, Literal(startvol, datatype=XSD.integer)))
+            g.add((loc, BDO.workLocationEndVolume, Literal(endvol, datatype=XSD.integer)))
+            g.add((loc, BDO.workLocationWork, firstres))
         else:
             g.add((thisres, BDO.workLinkTo, firstres))
     g.add((thisres, RDF.type, BDO.Work))
@@ -83,7 +94,9 @@ def addlineaschild(lines, lineidx, parent, g, partidx):
     return fillchildrenofline(lines, lineidx, thisres, g)
 
 
-WRIDPATTERN = re.compile("^W[0-9].+$")
+WRIDPATTERN = re.compile("^W[0-9][^(]+$")
+
+WRIDLOCPATTERN = re.compile("^W[0-9][^(]+\(([0-9]+,)+[0-9]+\)")
 
 def splitcontent(c):
     """
@@ -93,14 +106,22 @@ def splitcontent(c):
     firstspaceidx = c.find(" ")
     if firstspaceidx == -1:
         if WRIDPATTERN.match(c):
-            return (c, None)
-        else:
-            return (None, getliteralfromstring(c))
+            return (c, None, None)
+        if WRIDLOCPATTERN.match(c):
+            rid = c[:openparidx]
+            loc = c[openparidx+1:-1].split(",")
+            return (rid, None, loc)
+        return (None, getliteralfromstring(c), None)
     firstpart = c[:firstspaceidx]
     if WRIDPATTERN.match(firstpart):
-        return (firstpart, getliteralfromstring(c[firstspaceidx+1:]))
+        return (firstpart, getliteralfromstring(c[firstspaceidx+1:]), None)
+    if WRIDLOCPATTERN.match(firstpart):
+        openparidx = firstpart.find("(")
+        rid = firstpart[:openparidx]
+        loc = firstpart[openparidx+1:-1].split(",")
+        return (rid, getliteralfromstring(c[firstspaceidx+1:]), loc)
     else:
-        return (None, getliteralfromstring(c))
+        return (None, getliteralfromstring(c), None)
 
 def getliteralfromstring(s):
     if not s:
