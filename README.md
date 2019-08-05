@@ -51,15 +51,9 @@ Each line of the spreadsheet should only contain one value. Section and subsecti
 [spreadsheet screenshot]
 
 For texts running from a specific page to another page, add these four things to the tsv files:
-
-- start volume (sv)
-- end volume (ev)
-- start page (sp)
-- end page (ep)
-
-The entry should look like:
 ```
-W123(sp,ep,sv,ev) title
+W123(3,3,120,347) title
+W123(<start volume>,<end volume>,<start page>,<end page>) title
 ```
 ## Setting up an embedded reader
 
