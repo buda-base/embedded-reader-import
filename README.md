@@ -44,6 +44,17 @@ Note that `putg` is located in ~/bin/ on buda2 and so ~/bin must be on the path 
 
 ## Input file format
 
+To create a tsv catalog, copy-paste the catalog from a spreadsheet in a copy of an existing tsv.
+
+Each line of the spreadsheet should only contain one value. Section and subsections only need to contain the names, while works should contain a BDRC Work ID. Titles from BDRC will be displayed by default. You can replace them with a custom title by adding a space and the custom title after the Work ID. 
+
+[spreadsheet screenshot]
+
+For texts running from a specific page to another page, add these four things to the tsv files:
+```
+W123(3,3,120,347) title
+W123(<start volume>,<end volume>,<start page>,<end page>) title
+```
 ## Setting up an embedded reader
 
 - [setup instructions](https://github.com/buda-base/public-digital-library/blob/master/BDRC_Embedded_Reader.md)
