@@ -57,6 +57,11 @@ W123(<start volume>,<end volume>,<start page>,<end page>) title
 ```
 ## Setting up an embedded reader
 
+Iframe code:
+```
+<iframe src="http://library.bdrc.io/scripts/embed-iframe.html?work=bdr:W1ERI#######&origin=website.com"></iframe>
+```
+
 - [setup instructions](https://github.com/buda-base/public-digital-library/blob/master/BDRC_Embedded_Reader.md)
 - [catalog spreadsheets](https://drive.google.com/drive/folders/1sW4fFSYPswMg9pfP7zpVdy-VlGu1MLIY?usp=sharing)
 - [demo sites](https://github.com/bdrc-reader)
