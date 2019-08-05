@@ -50,9 +50,7 @@ Each line of the spreadsheet should only contain one value. Section and subsecti
 
 [spreadsheet screenshot]
 
-For texts running from a specific page to another page, add these four things to the tsv files:
-
-it's  where <start volume> and <end volume> are optional
+For texts running from a specific page to another page, add these four things to the tsv files (<start volume> and <end volume> are optional):
   
 ```
 W123(120,347,3,5) title
