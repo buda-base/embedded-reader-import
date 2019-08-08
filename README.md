@@ -50,12 +50,18 @@ Each line of the spreadsheet should only contain one value. Section and subsecti
 
 [spreadsheet screenshot]
 
-For texts running from a specific page to another page, add these four things to the tsv files:
+For texts running from a specific page to another page, add these four things to the tsv files (\<start volume\> and \<end volume\> are optional):
+  
 ```
-W123(3,3,120,347) title
-W123(<start volume>,<end volume>,<start page>,<end page>) title
+W123(120,347,3,5) title
+W123(<start page>,<end page>,<start volume>,<end volume>) title
 ```
 ## Setting up an embedded reader
+
+Iframe code:
+```
+<iframe src="http://library.bdrc.io/scripts/embed-iframe.html?work=bdr:W1ERI#######&origin=website.com"></iframe>
+```
 
 - [setup instructions](https://github.com/buda-base/public-digital-library/blob/master/BDRC_Embedded_Reader.md)
 - [catalog spreadsheets](https://drive.google.com/drive/folders/1sW4fFSYPswMg9pfP7zpVdy-VlGu1MLIY?usp=sharing)
