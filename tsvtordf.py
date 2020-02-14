@@ -1,3 +1,5 @@
+# named tsv but it's csv
+
 import sys
 import os
 import csv
@@ -20,7 +22,7 @@ NSM.bind("bda", BDA)
 NSM.bind("adm", ADM)
 NSM.bind("skos", SKOS)
 
-def linestordf(tsvlines, graphname):
+def linestordf(csvlines, graphname):
     """
     Returns an RDF graph or dataset from a yaml object
     """
@@ -29,7 +31,7 @@ def linestordf(tsvlines, graphname):
     g = ds.graph(BDG[graphname])
     g.namespace_manager = NSM
     i = 0
-    while i < len(tsvlines):
+    while i < len(csvlines):
         # the function returns the last analzed idx
         i = addlineaschild(lines, i, None, g, None)
         i += 1
@@ -55,7 +57,7 @@ def fillchildrenofline(lines, lineidx, lineres, g):
 
 
 def geturl(parent, partidx):
-    if not parent or not partidx: # should only happen when the URI is given in the tsv
+    if not parent or not partidx: # should only happen when the URI is given in the csv
         return None
     return URIRef(str(parent)+"_"+('%02d' % partidx))
 
@@ -141,8 +143,8 @@ def printrdf(dataset):
 
 def getlinesfromfile(filepath):
     lines = []
-    with open(filepath, 'r') as tsvfile:
-        reader = csv.reader(tsvfile, delimiter="\t")
+    with open(filepath, 'r', encoding='utf-8') as csvfile:
+        reader = csv.reader(csvfile)
         first = True # skipping the first line for now
         for row in reader:
             if first:
@@ -165,7 +167,8 @@ def graphnamefromfilepath(filepath):
     return basename
 
 if __name__ == "__main__":
-    srcfile = sys.argv[1]
+    # srcfile = sys.argv[1]
+    srcfile = r'C:\Users\trinley\github\embedded-reader-import\input\W1ERI0001.csv'
     lines = getlinesfromfile(srcfile)
     dataset = linestordf(lines, graphnamefromfilepath(srcfile))
     printrdf(dataset)
