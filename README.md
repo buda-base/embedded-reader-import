@@ -9,7 +9,7 @@ This script takes a TSV file (in the `input/` folder), generated from a spreadsh
 1.
 2.
 3. ས་སྐྱའི་ཆོས་སྒར། [Link](https://prose.io/#buda-base/embedded-reader-import/blob/master/input/W1ERI0003.csv)
-4.
+4. Garden-jangtse [Link](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0004.csv)
 5.
 6.
 7. geleknyima [link](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0007.csv)
