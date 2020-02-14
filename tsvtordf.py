@@ -167,8 +167,7 @@ def graphnamefromfilepath(filepath):
     return basename
 
 if __name__ == "__main__":
-    # srcfile = sys.argv[1]
-    srcfile = r'C:\Users\trinley\github\embedded-reader-import\input\W1ERI0001.csv'
+    srcfile = sys.argv[1]
     lines = getlinesfromfile(srcfile)
     dataset = linestordf(lines, graphnamefromfilepath(srcfile))
     printrdf(dataset)
