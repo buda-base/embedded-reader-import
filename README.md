@@ -10,7 +10,7 @@
 10. namdroling.or, https://github.com/namdroling [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0010.csv)
 11. http://dzongsarinstitute.org.in, https://github.com/dzongsarshedra, [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0008.tsv)
 12.
-13.
+13. palpung.org, https://github.com/palpung [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0013.csv)
 14.
 15.
 16.
