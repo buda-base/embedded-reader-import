@@ -1,5 +1,5 @@
 1. khampagar.org, https://github.com/khampagar [catalog](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0001.csv)
-2. vajravidya.org
+2. vajravidya.org, https://github.com/thrangu [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0002.csv)
 3. glorioussakya.org, https://github.com/Sakya-center [catalog](https://prose.io/#buda-base/embedded-reader-import/blob/master/input/W1ERI0003.csv)
 4. gadenjangtse.org, https://github.com/Garden-jangtse [catalog](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0004.csv)
 5. loselingmonastery.net, https://github.com/Loseling [Link](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0005.csv)
