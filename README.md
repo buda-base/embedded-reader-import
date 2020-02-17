@@ -16,7 +16,7 @@ This script takes a TSV file (in the `input/` folder), generated from a spreadsh
 8. varanasi college [Link](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0008.csv)
 9.
 10.
-11.
+11. http://dzongsarinstitute.org.in, https://github.com/dzongsarshedra, [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0008.tsv)
 12.
 13.
 14.
