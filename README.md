@@ -1,17 +1,9 @@
-# Collection import script for BDRC's eReader
-
-Import script for the BDRC embeded reader.
-
-This script takes a CSV file (in the `input/` folder), generated from a spreadsheet representing the collection, and outputs a .trig file (in the `output/` folder), ready to be imported in BDRC's database to generate the iframe code.
-
-## list
-
-1. 
-2. https://vajravidya.org , https://github.com/Thrangu [དཀར་ཆག](https://prose.io/#tadhondup/embedded-reader-import/edit/master/input/W1ERI0002.csv)
-3. Sakya-center [Link](https://prose.io/#buda-base/embedded-reader-import/blob/master/input/W1ERI0003.csv)
-4. Garden-jangtse [Link](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0004.csv)
-5. Gurthang Tsering [Link](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0005.csv)
-6. Tibetan Library [Link](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0006.csv)
+1. www.khampagar.org, https://github.com/khampagar [catalog](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0001.csv)
+2. https://vajravidya.org
+3. www.glorioussakya.org, https://github.com/Sakya-center [catalog](https://prose.io/#buda-base/embedded-reader-import/blob/master/input/W1ERI0003.csv)
+4. www.gadenjangtse.org, https://github.com/Garden-jangtse [catalog](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0004.csv)
+5. www.loselingmonastery.net, https://github.com/Loseling [Link](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0005.csv)
+6. https://tibetanlibrary.org/bo/, https://github.com/Tibetan-library [Link](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0006.csv)
 7. theyungdrungbon.com, https://github.com/geleknyima, [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0007.csv)
 8. varanasi college [Link](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0008.csv)
 9.
