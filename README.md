@@ -11,7 +11,7 @@
 11. http://dzongsarinstitute.org.in, https://github.com/dzongsarshedra, [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0008.tsv)
 12. gadenshartse.org, https://github.com/gadenshartse [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0012.csv)
 13. palpung.org, https://github.com/palpung [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0013.csv)
-14.
+14. gyudra.com, https://github.com/gyudra [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0014.csv)
 15.
 16.
 17.
