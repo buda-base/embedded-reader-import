@@ -5,7 +5,7 @@
 5. www.loselingmonastery.net, https://github.com/Loseling [Link](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0005.csv)
 6. https://tibetanlibrary.org/bo/, https://github.com/Tibetan-library [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0006.csv)
 7. theyungdrungbon.com, https://github.com/geleknyima, [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0007.csv)
-8. cuts.ac.in, https://github.com/CIHTS [catalog](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0008.csv)
+8. cuts.ac.in, https://github.com/Cutac [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0008.csv)
 9. shechen.org, [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0009.csv)
 10.
 11. http://dzongsarinstitute.org.in, https://github.com/dzongsarshedra, [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0008.tsv)
