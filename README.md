@@ -28,9 +28,9 @@
 28. [དཀར་ཆག](https://github.com/buda-base/embedded-reader-import/blob/master/input/W1ERI0028.csv)
 29. rigzod.org, [དཀར་ཆག](https://github.com/buda-base/embedded-reader-import/blob/master/input/W1ERI0029.csv) 
 30. serameymonastery.org, [དཀར་ཆག](https://github.com/buda-base/embedded-reader-import/blob/master/input/W1ERI0030.csv)
-31.
-32.
-33.
+31. [དཀར་ཆག](https://github.com/buda-base/embedded-reader-import/blob/master/input/W1ERI0031.csv)
+32. tbrc.org, [དཀར་ཆག](https://github.com/buda-base/embedded-reader-import/blob/master/input/W1ERI0032.csv)
+33. lopenling.org, [དཀར་ཆག](https://github.com/buda-base/embedded-reader-import/blob/master/input/W1ERI0033.csv)
 
 
 ## Dependency installation
