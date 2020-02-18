@@ -12,7 +12,7 @@
 12. gadenshartse.org, https://github.com/gadenshartse [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0012.csv)
 13. palpung.org, https://github.com/palpung [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0013.csv)
 14. gyudra.com, https://github.com/gyudra [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0014.csv)
-15.
+15. sarah.instituteofbuddhistdialectics.org, https://github.com/sarahcollege [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0015.csv)
 16.
 17.
 18.
