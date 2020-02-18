@@ -4,8 +4,9 @@ Import script for the BDRC embeded reader.
 
 This script takes a TSV file (in the `input/` folder), generated from a spreadsheet representing the collection, and outputs a .trig file (in the `output/` folder), ready to be imported in BDRC's database to generate the iframe code.
 
-## List of Embedded Collections
+## Index
 
+#, site, github user, catalog
 1. khampagar.org, https://github.com/khampagar [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0001.csv)
 2. vajravidya.org, https://github.com/thrangu [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0002.csv)
 3. glorioussakya.org, https://github.com/Sakya-center [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/blob/master/input/W1ERI0003.csv)
