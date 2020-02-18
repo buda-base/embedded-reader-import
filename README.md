@@ -18,7 +18,7 @@
 18. gomanglibrary.com, https://github.com/gomanglibrary [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0018.csv)
 19. serajeyrigzodchenmo.org, https://github.com/serajeyrigzodchenmo [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0019.csv)
 20. [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0020.csv)
-21. tashilhunpo.org, [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0021.csv)
+21. tashilhunpo.org, https://github.com/tashilhunpo [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0021.csv)
 22.  kirti92.org, [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0022.csv)
 23. [དཀར་ཆག](https://github.com/buda-base/embedded-reader-import/blob/master/input/W1ERI0023.csv)
 24. [དཀར་ཆག](https://github.com/buda-base/embedded-reader-import/blob/master/input/W1ERI0024.csv)
