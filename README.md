@@ -14,7 +14,7 @@
 14. gyudra.com, https://github.com/gyudra [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0014.csv)
 15. sarah.instituteofbuddhistdialectics.org, https://github.com/sarahcollege [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0015.csv)
 16. sakyacollege.org, https://github.com/sakyacollege [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0016.csv)
-17.
+17. internationalbuddhistacademy.org, https://github.com/internationalbuddhistacademy [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0017.csv)
 18.
 19.
 20.
