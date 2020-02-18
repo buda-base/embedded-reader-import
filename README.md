@@ -15,10 +15,10 @@
 15. sarah.instituteofbuddhistdialectics.org, https://github.com/sarahcollege [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0015.csv)
 16. sakyacollege.org, https://github.com/sakyacollege [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0016.csv)
 17. internationalbuddhistacademy.org, https://github.com/internationalbuddhistacademy [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0017.csv)
-18.
-19.
-20.
-21.
+18. gomanglibrary.com, https://github.com/gomanglibrary [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0018.csv)
+19. serajeyrigzodchenmo.org, [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0019.csv)
+20. [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0020.csv)
+21. tashilhunpo.org, [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0021.csv)
 22
 23.
 24.
