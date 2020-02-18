@@ -1,3 +1,9 @@
+# Collection import script for BDRC's eReader
+
+Import script for the BDRC embeded reader.
+
+This script takes a TSV file (in the `input/` folder), generated from a spreadsheet representing the collection, and outputs a .trig file (in the `output/` folder), ready to be imported in BDRC's database to generate the iframe code.
+
 ## List of Embedded Readers
 
 1. khampagar.org, https://github.com/khampagar [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0001.csv)
