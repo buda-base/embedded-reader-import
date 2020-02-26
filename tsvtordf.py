@@ -96,9 +96,9 @@ def addlineaschild(lines, lineidx, parent, g, partidx):
     return fillchildrenofline(lines, lineidx, thisres, g)
 
 
-WRIDPATTERN = re.compile("^W[0-9][^( ]+$")
+WRIDPATTERN = re.compile(r"^W[0-9][^( ]+$")
 
-WRIDLOCPATTERN = re.compile("^W[0-9][^( ]+\(([0-9]+,)+[0-9]+\)")
+WRIDLOCPATTERN = re.compile(r"^W[0-9][^( ]+\(([0-9]+,)+[0-9]+\)")
 
 def splitcontent(c):
     """
@@ -130,7 +130,7 @@ def getliteralfromstring(s):
     if not s:
         return None
     firstchar = s[0]
-    if firstchar > '\u0F00' and firstchar < '\u0FFF':
+    if firstchar > r'\u0F00' and firstchar < r'\u0FFF':
         return Literal(s, lang="bo")
     else:
         return Literal(s, lang="en")
