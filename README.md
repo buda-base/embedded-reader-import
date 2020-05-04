@@ -29,7 +29,7 @@ This script takes a TSV file (in the `input/` folder), generated from a spreadsh
 20. [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0020.csv)
 21. tashilhunpo.org, https://github.com/tashilhunpo [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0021.csv)
 22.  kirti92.org, https://github.com/Kirtigonpa [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0022.csv)
-23. [དཀར་ཆག](https://github.com/buda-base/embedded-reader-import/blob/master/input/W1ERI0023.csv)
+23. [དཀར་ཆག](https://prose.io/#buda-base/embedded-reader-import/edit/master/input/W1ERI0023.csv)
 24. [དཀར་ཆག](https://github.com/buda-base/embedded-reader-import/blob/master/input/W1ERI0024.csv)
 25. songtsenlibrary.net, [དཀར་ཆག](https://github.com/buda-base/embedded-reader-import/blob/master/input/W1ERI0025.csv)
 26. [དཀར་ཆག](https://github.com/buda-base/embedded-reader-import/blob/master/input/W1ERI0026.csv)
