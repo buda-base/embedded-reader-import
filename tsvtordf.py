@@ -22,6 +22,12 @@ NSM.bind("bda", BDA)
 NSM.bind("adm", ADM)
 NSM.bind("skos", SKOS)
 
+RIDSUBST = {}
+with open("id-migration.csv", 'r', encoding='utf-8') as csvfile:
+    reader = csv.reader(csvfile)
+    for row in reader:
+        RIDSUBST[row[0]] = row[1]
+
 def linestordf(csvlines, graphname):
     """
     Returns an RDF graph or dataset from a yaml object
@@ -69,28 +75,34 @@ def addlineaschild(lines, lineidx, parent, g, partidx):
     cparts = splitcontent(line["content"])
     thisres = geturl(parent, partidx)
     if cparts[0] is not None:
-        firstres = URIRef(BDR[cparts[0]])
+        firstres = cparts[0]
+        if firstres in RIDSUBST:
+            firstres = RIDSUBST[firstres]
+        if firstres.startswith("W"):
+            firstres = "M"+firstres
+        firstres = BDR[firstres]
         if cparts[0].startswith("W1ERI0"):
             thisres = firstres
         elif cparts[2] is not None:
             loc = BNode()
             locinfo = cparts[2]
-            g.add((thisres, BDO.workLocation, loc))
-            g.add((loc, BDO.workLocationPage, Literal(locinfo[0], datatype=XSD.integer)))
-            g.add((loc, BDO.workLocationEndPage, Literal(locinfo[1], datatype=XSD.integer)))
+            g.add((thisres, BDO.contentLocation, loc))
+            g.add((loc, RDF.type, BDO.ContentLocation))
+            g.add((loc, BDO.contentLocationPage, Literal(locinfo[0], datatype=XSD.integer)))
+            g.add((loc, BDO.contentLocationEndPage, Literal(locinfo[1], datatype=XSD.integer)))
             startvol = 1 if len(locinfo) < 3 else locinfo[2]
             endvol = startvol if len(locinfo) < 4 else locinfo[3]
-            g.add((loc, BDO.workLocationVolume, Literal(startvol, datatype=XSD.integer)))
-            g.add((loc, BDO.workLocationEndVolume, Literal(endvol, datatype=XSD.integer)))
-            g.add((loc, BDO.workLocationWork, firstres))
+            g.add((loc, BDO.contentLocationVolume, Literal(startvol, datatype=XSD.integer)))
+            g.add((loc, BDO.contentLocationEndVolume, Literal(endvol, datatype=XSD.integer)))
+            g.add((loc, BDO.contentLocationInstance, firstres))
         else:
-            g.add((thisres, BDO.workLinkTo, firstres))
-    g.add((thisres, RDF.type, BDO.Work))
-    g.add((thisres, RDF.type, BDO.VirtualWork))
+            g.add((thisres, BDO.virtualLinkTo, firstres))
+    g.add((thisres, RDF.type, BDO.Instance))
+    g.add((thisres, RDF.type, BDO.VirtualInstance))
     if parent is not None:
-        g.add((thisres, BDO.workPartOf, parent))
-        g.add((parent, BDO.workHasPart, thisres))
-        g.add((thisres, BDO.workPartIndex, Literal(partidx, datatype=XSD.integer)))
+        g.add((thisres, BDO.partOf, parent))
+        g.add((parent, BDO.hasPart, thisres))
+        g.add((thisres, BDO.partIndex, Literal(partidx, datatype=XSD.integer)))
     if cparts[1] is not None:
         g.add((thisres, SKOS.prefLabel, cparts[1]))
     return fillchildrenofline(lines, lineidx, thisres, g)
