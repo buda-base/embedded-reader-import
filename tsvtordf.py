@@ -142,7 +142,7 @@ def getliteralfromstring(s):
     if not s:
         return None
     firstchar = s[0]
-    if firstchar > r'\u0F00' and firstchar < r'\u0FFF':
+    if firstchar > '\u0F00' and firstchar < '\u0FFF':
         return Literal(s, lang="bo")
     else:
         return Literal(s, lang="en")
