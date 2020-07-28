@@ -78,7 +78,7 @@ def addlineaschild(lines, lineidx, parent, g, partidx):
         firstres = cparts[0]
         if firstres in RIDSUBST:
             firstres = RIDSUBST[firstres]
-        if firstres.startswith("W"):
+        if firstres.startswith("W") and not firstres.startswith("W1ERI0"):
             firstres = "M"+firstres
         firstres = BDR[firstres]
         if cparts[0].startswith("W1ERI0"):
