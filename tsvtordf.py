@@ -108,9 +108,9 @@ def addlineaschild(lines, lineidx, parent, g, partidx):
     return fillchildrenofline(lines, lineidx, thisres, g)
 
 
-WRIDPATTERN = re.compile(r"^W[0-9][^( ]+$")
+WRIDPATTERN = re.compile(r"^M?W[0-9][^( ]+$")
 
-WRIDLOCPATTERN = re.compile(r"^W[0-9][^( ]+\(([0-9]+,)+[0-9]+\)")
+WRIDLOCPATTERN = re.compile(r"^M?W[0-9][^( ]+\(([0-9]+,)+[0-9]+\)")
 
 def splitcontent(c):
     """
