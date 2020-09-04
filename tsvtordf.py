@@ -33,15 +33,14 @@ def linestordf(csvlines, graphname):
     Returns an RDF graph or dataset from a yaml object
     """
     curidx = 0
-    ds = rdflib.Dataset()
-    g = ds.graph(BDG[graphname])
+    g = rdflib.Graph()
     g.namespace_manager = NSM
     i = 0
     while i < len(csvlines):
         # the function returns the last analzed idx
         i = addlineaschild(lines, i, None, g, None)
         i += 1
-    return ds
+    return g
 
 def fillchildrenofline(lines, lineidx, lineres, g):
     """
@@ -147,11 +146,11 @@ def getliteralfromstring(s):
     else:
         return Literal(s, lang="en")
 
-def printrdf(dataset):
+def printrdf(g):
     """
     Prints the dataset to stdout, in trig serialization.
     """
-    print(dataset.serialize(format='trig').decode("utf-8") )
+    print(g.serialize(format='turtle').decode("utf-8") )
 
 def getlinesfromfile(filepath):
     lines = []
@@ -181,5 +180,5 @@ def graphnamefromfilepath(filepath):
 if __name__ == "__main__":
     srcfile = sys.argv[1]
     lines = getlinesfromfile(srcfile)
-    dataset = linestordf(lines, graphnamefromfilepath(srcfile))
-    printrdf(dataset)
+    g = linestordf(lines, graphnamefromfilepath(srcfile))
+    printrdf(g)
