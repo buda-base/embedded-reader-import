@@ -75,6 +75,9 @@ def addlineaschild(lines, lineidx, parent, g, partidx):
     thisres = geturl(parent, partidx)
     if cparts[0] is not None:
         firstres = cparts[0]
+        iinstancelname = firstres
+        if iinstancelname.startswith("M"):
+            iinstancelname = iinstancelname[1:]
         if firstres in RIDSUBST:
             firstres = RIDSUBST[firstres]
         if firstres.startswith("W") and not firstres.startswith("W1ERI0"):
@@ -93,7 +96,7 @@ def addlineaschild(lines, lineidx, parent, g, partidx):
             endvol = startvol if len(locinfo) < 4 else locinfo[3]
             g.add((loc, BDO.contentLocationVolume, Literal(startvol, datatype=XSD.integer)))
             g.add((loc, BDO.contentLocationEndVolume, Literal(endvol, datatype=XSD.integer)))
-            g.add((loc, BDO.contentLocationInstance, firstres))
+            g.add((loc, BDO.contentLocationInstance, BDR[iinstancelname]))
         else:
             g.add((thisres, BDO.virtualLinkTo, firstres))
     g.add((thisres, RDF.type, BDO.Instance))
