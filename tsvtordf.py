@@ -6,13 +6,15 @@ import csv
 import re
 import rdflib
 from rdflib import URIRef, Literal, BNode
-from rdflib.namespace import RDF, SKOS, Namespace, NamespaceManager, XSD
+from rdflib.namespace import RDF, SKOS, Namespace, NamespaceManager, XSD, RDF, RDFS
+import glob
 
 BDR = Namespace("http://purl.bdrc.io/resource/")
 BDO = Namespace("http://purl.bdrc.io/ontology/core/")
 BDG = Namespace("http://purl.bdrc.io/graph/")
 BDA = Namespace("http://purl.bdrc.io/admindata/")
 ADM = Namespace("http://purl.bdrc.io/ontology/admin/")
+BF = Namespace("http://id.loc.gov/ontologies/bibframe/")
 
 NSM = NamespaceManager(rdflib.Graph())
 NSM.bind("bdr", BDR)
@@ -21,6 +23,10 @@ NSM.bind("bdg", BDG)
 NSM.bind("bda", BDA)
 NSM.bind("adm", ADM)
 NSM.bind("skos", SKOS)
+NSM.bind("rdf", RDF)
+NSM.bind("rdfs", RDFS)
+NSM.bind("bf", BF)
+NSM.bind("xsd", XSD)
 
 RIDSUBST = {}
 with open("id-migration.csv", 'r', encoding='utf-8') as csvfile:
@@ -28,19 +34,16 @@ with open("id-migration.csv", 'r', encoding='utf-8') as csvfile:
     for row in reader:
         RIDSUBST[row[0]] = row[1]
 
-def linestordf(csvlines, graphname):
+def linestordf(g, csvlines):
     """
     Returns an RDF graph or dataset from a yaml object
     """
     curidx = 0
-    g = rdflib.Graph()
-    g.namespace_manager = NSM
     i = 0
     while i < len(csvlines):
         # the function returns the last analzed idx
-        i = addlineaschild(lines, i, None, g, None)
+        i = addlineaschild(csvlines, i, None, g, None)
         i += 1
-    return g
 
 def fillchildrenofline(lines, lineidx, lineres, g):
     """
@@ -149,12 +152,6 @@ def getliteralfromstring(s):
     else:
         return Literal(s, lang="en")
 
-def printrdf(g):
-    """
-    Prints the dataset to stdout, in trig serialization.
-    """
-    print(g.serialize(format='turtle').decode("utf-8") )
-
 def getlinesfromfile(filepath):
     lines = []
     with open(filepath, 'r', encoding='utf-8') as csvfile:
@@ -180,8 +177,14 @@ def graphnamefromfilepath(filepath):
         basename += "W1ERI0"
     return basename
 
+def migrate_all():
+    g = rdflib.Graph()
+    g.namespace_manager = NSM
+    for fpath in glob.glob("input/*.csv"):
+        lines = getlinesfromfile(fpath)
+        linestordf(g, lines)
+    g.serialize("EMBR.ttl", format="turtle")
+    print("now run\ncurl -X PUT -H Content-Type:text/turtle -T EMBR.ttl -G http://buda1.bdrc.io:13180/fuseki/corerw/data --data-urlencode 'graph=http://purl.bdrc.io/graph/EMBR'\nthen\ncurl -XPOST http://purl.bdrc.io/clearcache\ncurl -XPOST http://iiifpres.bdrc.io/clearcache")
+
 if __name__ == "__main__":
-    srcfile = sys.argv[1]
-    lines = getlinesfromfile(srcfile)
-    g = linestordf(lines, graphnamefromfilepath(srcfile))
-    printrdf(g)
+    migrate_all()

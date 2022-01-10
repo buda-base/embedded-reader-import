@@ -58,27 +58,13 @@ before the requirements.txt.
 
 ## Running the script
 
-To output the RDF of one tsv file:
+To convert all csv files into an RDF graph, run
 
 ```sh
-$ python3 tsvtordf.py input/myfile.tsv
+$ python3 tsvtordf.py
 ```
 
-To convert all the files into the `output/` folder:
-
-```
-for i in input/*.csv; do b=`basename $i`; bnoext=${b%.*}; bfirst=${bnoext% *}; echo "converting $i"; python3 tsvtordf.py $i > output/$bfirst.trig; done
-```
-
-## Uploading to Fuseki
-
-When on buda2, once the files have been converted, run:
-
-```
-for i in output/*.trig; do b=`basename $i`; bnoext=${b%.*}; putg corerw $b $i; done
-```
-
-Note that `putg` is located in ~/bin/ on buda2 and so ~/bin must be on the path when the above is run.
+and then execute the command given as output to upload the new data in the database.
 
 ## Input file format
 
